@@ -5,9 +5,9 @@ import {createPost,updatePost,deletePost} from '../redux/postSlice'
 
 const Post = ({idS,imageS,titleS,descriptionS}) => {
     const [show,setShow]=useState(false)
-    const [title, setTitle] = useState('')
-    const [image, setImage] = useState('')
-    const [description, setDescription] = useState('')
+    const [title, setTitle] = useState(titleS)
+    const [image, setImage] = useState(imageS)
+    const [description, setDescription] = useState(descriptionS)
 
     const getPost= useSelector(state=>state.posts)
     
