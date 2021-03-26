@@ -30,8 +30,8 @@ const BlogPosts = ({show}) => {
 
             {
                 getPost.map((post)=>(
-                    <div>
-                       
+                    <div key={post.id}>
+                    {console.log(post.id)}
                     <Post key={post.id} idS={post.id}imageS={post.image} titleS={post.title} descriptionS={post.description}/>
                     </div>
                 ))
