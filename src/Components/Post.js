@@ -3,7 +3,7 @@ import {Modal, Button, Form, Row, Col, Container} from 'react-bootstrap'
 import { useSelector, useDispatch } from 'react-redux'
 import {createPost,updatePost,deletePost} from '../redux/postSlice'
 
-const Post = ({idS,imageS,titleS,descriptionS}) => {
+const Post = ({idS,imageS,titleS,descriptionS,counter}) => {
     const [show,setShow]=useState(false)
     const [title, setTitle] = useState(titleS)
     const [image, setImage] = useState(imageS)
@@ -29,11 +29,11 @@ const Post = ({idS,imageS,titleS,descriptionS}) => {
 
     }
     return (
-        <div className="container border">
+        <div className="container border" style={{padding:30}}>
             {!show &&
             <>
                 <img src={imageS}/>
-                <h1>{titleS}</h1>
+                <h3>{`Post # ${counter}: ${titleS}`}</h3>
                 <p>{descriptionS}</p>
                 <Button variant='warning' onClick={()=>setShow(true)}>Edit Post</Button>
             </>

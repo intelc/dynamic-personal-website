@@ -3,8 +3,8 @@ import { createSlice } from '@reduxjs/toolkit'
 export const tagLineSlice = createSlice({
   name: 'tagLine',
   initialState: {
-    image:'https://picsum.photos/200/300',
-    description: 'default tagline'
+    image:'',
+    description: ''
   },
   reducers: {
     updateImage: (state,action)=> {

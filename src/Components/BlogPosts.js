@@ -7,6 +7,7 @@ import Post from './Post'
 
 const BlogPosts = ({show}) => {
     const [editOn, setEditOn] = useState(false)
+    const [counter, setCounter] = useState(1)
     const getPost= useSelector(state=>state.post.posts)
     
     const dispatch = useDispatch()
@@ -29,12 +30,18 @@ const BlogPosts = ({show}) => {
             <Row>
 
             {
-                getPost.map((post)=>(
-                    <div key={post.id}>
+                getPost.map((post)=>{
+                    
+                    return(
+                    <div key={post.id} style={{padding:10}}>
                     {console.log(post.id)}
-                    <Post key={post.id} idS={post.id}imageS={post.image} titleS={post.title} descriptionS={post.description}/>
+                    <Post idS={post.id}imageS={post.image} titleS={post.title} descriptionS={post.description} counter={getPost.length}/>
+                    
                     </div>
-                ))
+                    )
+                }
+                    
+                )
             }
 
             </Row>
