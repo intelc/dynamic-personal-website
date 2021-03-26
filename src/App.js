@@ -1,22 +1,20 @@
-import logo from './logo.svg';
-import React, {useState}  from 'react'
-import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css"
+import React, { useState } from 'react'
+import logo from './logo.svg'
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import BlogPosts from './Components/BlogPosts'
-import Header from './Components/Header';
-import ModalForm from './Components/ModalForm';
-import {Modal,Button} from 'react-bootstrap'
-
+import Header from './Components/Header'
+import ModalForm from './Components/ModalForm'
 
 function App() {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false)
   return (
     <div className="App">
-      <Header/>
-      <BlogPosts show = {()=>setShow(true)}/>
-      <ModalForm show ={show} onHide={()=>setShow(false)}/>
+      <Header />
+      <BlogPosts show={() => setShow(true)} />
+      <ModalForm show={show} onHide={() => setShow(false)} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

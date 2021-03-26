@@ -4,7 +4,7 @@ import postReducer from './postSlice'
 
 export default configureStore({
   reducer: {
-      tagLine: tagLineReducer,
-      post: postReducer
-  }
+    tagLine: tagLineReducer,
+    post: postReducer,
+  },
 })
